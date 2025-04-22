@@ -81,7 +81,7 @@ function pintaVermelho() {
         valorCelula = parseFloat(valorCelula); // Converte para número
         if (valorCelula > 100) {
             tabela.rows[i].cells[1].style.color = "red"; // Define a cor da fonte como vermelho
-            tabela.rows[i].cells[1].style.fontWeight = "bold"; // Deixa o texto em negrito
+            tabela.rows[i].cells[1].style.fontWeight = "bold"; //texto em negrito
         } else {
             tabela.rows[i].cells[1].style.color = ""; // Remove a cor se não for maior que 100
             tabela.rows[i].cells[1].style.fontWeight = ""; // Remove o negrito
