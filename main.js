@@ -11,3 +11,21 @@ function acessar(){
         window.location.href = 'cadastro.html';
     }
 }
+
+// Cria variável do tipo array
+var dadosLista = [];
+
+function salvarTarefa(){
+    let nomeTarefa = document.getElementById('nomeTarefa').value;
+
+    if(nomeTarefa){
+        dadosLista.push(nomeTarefa);
+        console.log(dadosLista);
+        criaLista();
+        document.getElementById('nomeTarefa').value = '';
+        alert('Tarefa cadastrada com sucesso!');
+    }else {
+        alert("Favor informar uma tarefa para ser cadastrada");
+    }
+
+}
