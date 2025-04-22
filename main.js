@@ -48,3 +48,16 @@ function criaLista() {
     }
     document.getElementById("tabela").innerHTML = tabela;
 }
+
+// Função para excluir nome da lista
+function excluir(linha) {
+    dadosLista.splice(linha - 1, 1);
+    criaLista();
+}
+// Função para editar nome da lista
+function editar(linha) {
+    let tarefa = dadosLista[linha - 1];
+    document.getElementById('nomeTarefa').value = tarefa.descricao;
+    document.getElementById('valorTarefa').value = tarefa.valor;
+    document.getElementById('categoriaTarefa').value = tarefa.categoria;
+}
