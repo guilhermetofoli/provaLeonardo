@@ -47,7 +47,7 @@ function criaLista() {
                   "</tr>";
     }
     document.getElementById("tabela").innerHTML = tabela;
-    somaValores();
+    somaValores(); // Chama a função para calcular a soma dos valores
 }
 
 // Função para excluir tarefa da lista
@@ -64,6 +64,7 @@ function editar(linha) {
     document.getElementById('categoriaTarefa').value = tarefa.categoria;
 }
 
+// Função para calcular a soma dos valores
 function somaValores() {
     let soma = 0;
     for (let i = 0; i < dadosLista.length; i++) {
