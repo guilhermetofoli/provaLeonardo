@@ -29,3 +29,21 @@ function salvarTarefa(){
     }
 
 }
+
+//Função para preencher a lista de cadastro
+
+function criaLista() {
+    let tabela = "<tr><th>Descrição</th><th>Valor</th><th>Categoria</th><th>Ações</th></tr>";
+    for (let i = 0; i < dadosLista.length; i++) {
+        tabela += "<tr>" +
+                  "<td>" + dadosLista[i] + "</td>" + // Adiciona o valor em "Descrição"
+                  "<td></td>" + // Coluna "Valor" vazia
+                  "<td></td>" + // Coluna "Categoria" vazia
+                  "<td>" +
+                  "<button class='btn btn-warning' onclick='editar(this.parentNode.parentNode.rowIndex)'>Editar</button>" +
+                  "<button class='btn btn-danger' onclick='excluir(this.parentNode.parentNode.rowIndex)'>Excluir</button>" +
+                  "</td>" +
+                  "</tr>";
+    }
+    document.getElementById("tabela").innerHTML = tabela;
+}
