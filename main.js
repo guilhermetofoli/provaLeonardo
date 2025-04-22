@@ -48,6 +48,7 @@ function criaLista() {
     }
     document.getElementById("tabela").innerHTML = tabela;
     somaValores(); // Chama a função para calcular a soma dos valores
+    pintaVermelho();
 }
 
 // Função para excluir tarefa da lista
@@ -71,4 +72,19 @@ function somaValores() {
         soma += parseFloat(dadosLista[i].valor);
     }
     document.getElementById("soma").innerHTML = "Soma Total: R$ " + soma.toFixed(2);
+}
+
+function pintaVermelho() {
+    let tabela = document.getElementById("tabela");
+    for (let i = 1; i < tabela.rows.length; i++) { // Ignora o cabeçalho
+        let valorCelula = tabela.rows[i].cells[1].innerText.replace("R$", "").trim(); // Remove "R$" e espaços
+        valorCelula = parseFloat(valorCelula); // Converte para número
+        if (valorCelula > 100) {
+            tabela.rows[i].cells[1].style.color = "red"; // Define a cor da fonte como vermelho
+            tabela.rows[i].cells[1].style.fontWeight = "bold"; // Deixa o texto em negrito
+        } else {
+            tabela.rows[i].cells[1].style.color = ""; // Remove a cor se não for maior que 100
+            tabela.rows[i].cells[1].style.fontWeight = ""; // Remove o negrito
+        }
+    }
 }
