@@ -47,6 +47,7 @@ function criaLista() {
                   "</tr>";
     }
     document.getElementById("tabela").innerHTML = tabela;
+    somaValores();
 }
 
 // Função para excluir tarefa da lista
@@ -61,4 +62,12 @@ function editar(linha) {
     document.getElementById('nomeTarefa').value = tarefa.descricao;
     document.getElementById('valorTarefa').value = tarefa.valor;
     document.getElementById('categoriaTarefa').value = tarefa.categoria;
+}
+
+function somaValores() {
+    let soma = 0;
+    for (let i = 0; i < dadosLista.length; i++) {
+        soma += parseFloat(dadosLista[i].valor);
+    }
+    document.getElementById("soma").innerHTML = "Soma Total: R$ " + soma.toFixed(2);
 }
