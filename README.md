@@ -25,3 +25,7 @@ Uma calculadora de gastos mensais via web. A Calculadora foi desenvolvido utiliz
 # Extra 
 
 - **Funcionalidade com o GitHub Pages**
+
+# Mais Informações
+
+- **Autor**: Guilherme Tófoli da Silva
