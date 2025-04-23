@@ -17,7 +17,11 @@ Uma calculadora de gastos mensais via web. A Calculadora foi desenvolvido utiliz
 -   **Destaque para Gastos Altos**: Os gastos com valor superior a R$100 são destacados em vermelho para fácil identificação.
 -   **Soma Total dos Gastos**: Exibe o total de todos os gastos cadastrados (em tempo real) embaixo de toda a tabela.
 
-## Linguagens Utilizadas
+# Linguagens Utilizadas
 - **HTML**: Estruturação do conteúdo da página.
 - **CSS**: Estilização e layout da aplicação.
 - **JavaScript**: Funções e arrays.
+
+# Extra 
+
+- **Funcionalidade com o GitHub Pages**
